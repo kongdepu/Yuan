@@ -50,7 +50,7 @@ function switchPlayer(data) {
   player = new APlayer({
     element: document.getElementById('aplayer'),
     lrcType: 3,
-    theme: '#ad7a86',
+    theme: themeColor,
     order: 'list',
     audio: lyricsFormatting(data)
   });
