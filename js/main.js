@@ -1,11 +1,15 @@
 (function ($) {
 	"use strict"
 
-	///////////////////////////
 	// 页面预加载
 	$(window).on('load', function () {
-		$("#preloader").delay(2000).fadeOut();
+		$("#preloader").delay(1000).fadeOut();
 	});
+
+	// 获取主页文案
+	$.get("https://v1.hitokoto.cn/?c=f&encode=text",((res) => {
+		$('#copywriting').text(res)
+	}));
 
 	// 设置主题颜色
 	const themeColorSession = sessionStorage.getItem('theme_color');

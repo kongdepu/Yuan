@@ -2,7 +2,7 @@
 :root{
   --theme-color:rgb(97, 149, 255);
 }
-
+/* background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%); */
 /* 自定义layer弹窗样式 */
 body .layer-custom-class .layui-layer-title{
   background:var(--theme-color);
@@ -650,10 +650,6 @@ header {
   text-align: center;
 }
 
-.home-content h1 {
-  text-transform: uppercase;
-}
-
 .home-content button {
   margin-top: 20px;
 }
@@ -675,6 +671,41 @@ header {
 
 .breadcrumb>li+li:before {
   color: #868F9B;
+}
+
+/* 箭头 */
+.toNav {
+  text-align: center;
+  z-index: 99999;
+  position: absolute;
+  top: 45vh;
+  left: 0;
+  color: var(--theme-color);
+  right: 0;
+  animation: move 1.5s infinite;
+  /* font-size: ; */
+}
+
+.toNav:before {
+  content: '\f078';
+  font-family: FontAwesome;
+  margin-left: 0px;
+}
+
+.toNav:hover {
+  animation: pause;
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(10px);
+    opacity: 1;
+  }
 }
 
 
@@ -1177,7 +1208,8 @@ header {
   top: 0;
   bottom: 0;
   right: 0;
-  /* background-color: #FFF; */
+  background-color: #FFF;
+  /* opacity: 0.8; */
   z-index: 99999;
 }
 
