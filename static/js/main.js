@@ -11,12 +11,10 @@
 		$('#copywriting').text(res)
 	}));
 
-	// 设置主题颜色
-	const themeColorSession = sessionStorage.getItem('theme_color');
+	// 加载缓存中的主题颜色 
+	const themeColorSession = $.storage.get('theme_color');
 	if (themeColorSession != null) {
-		const root = document.querySelector(":root");
-		// 设置 CSS 变量
-		root.style.setProperty("--theme-color", themeColorSession);
+		setThemeColor(themeColorSession)
 	}
 
 	///////////////////////////
