@@ -12,18 +12,18 @@
 	<link rel="stylesheet" href="css/flipclock.css">
 
 	<style>
-		body {
-
-			margin: 20px auto;
-
-
+		* {
+			margin: 0px;
+			padding: 0px;
 		}
 
-		.your-clock {
-			margin: 0 auto;
-			margin-top: 20%;
-			clear: both;
-			width: 460px;
+		.container {
+			/* border: 1px solid red; */
+			width: 100%;
+			height: calc(100vh);
+			display: flex;
+			justify-content: center;
+			align-items: center;
 		}
 
 		.flip-clock-label {
@@ -36,8 +36,9 @@
 <body>
 
 	<div class="container">
-		<div class="your-clock"></div>
+		<div id="clock"></div>
 	</div>
+
 
 
 
@@ -47,14 +48,21 @@
 
 	<script src="js/flipclock.min.js"></script>
 
+	<script src="js/jquery.fullscreen.js"></script>
+
 	<script>
-		// 对应的是(天,时,分,12小时制,24小时制,计数)
-		// clockFace : DailyCounter | HourlyCounter | MinuteCounter | TwelveHourClock | TwentyFourHourClock | Counter
-		var clock = $('.your-clock').FlipClock({
-			clockFace: 'TwentyFourHourClock',
-
-
-		});
+		(function ($) {
+			"use strict"
+			// 页面预加载
+			$('#clock').on('click', function () {
+				$(document).toggleFullScreen();
+			});
+			// 对应的是(天,时,分,12小时制,24小时制,计数)
+			// clockFace : DailyCounter | HourlyCounter | MinuteCounter | TwelveHourClock | TwentyFourHourClock | Counter
+			var clock = $('#clock').FlipClock({
+				clockFace: 'TwentyFourHourClock',
+			});
+		})(jQuery);
 
 	</script>
 

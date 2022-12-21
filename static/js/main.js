@@ -113,10 +113,4 @@
 		}
 	});
 
-	// 全屏显示
-	$('#fullScreen').on('click', function () {
-		$(document).toggleFullScreen();
-	});
-
-
 })(jQuery);
