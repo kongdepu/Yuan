@@ -337,9 +337,15 @@ textarea:focus {
   left: 0;
   right: 0;
   padding: 0px 0px;
-  background-color: #FFF !important;
-  border-bottom: 1px solid #EEE;
+  /* background-color: #FFF !important; */
+  /* border-bottom: 1px solid #EEE; */
+  background-repeat: repeat-x;
+  background-position: 0 0;
+  background-color: rgba(0,0,0,.3);
+  z-index: 99999;
+  overflow: hidden;
 }
+
 
 #nav.nav-transparent {
   background: transparent;
@@ -367,21 +373,28 @@ textarea:focus {
     color: #fff;
   }
 
+  #nav.fixed-nav:not(.nav-transparent) .main-nav>li>a {
+    color: #fff;
+  }
+
   .main-nav>li>a:hover,
   .main-nav>li>a:focus,
   .main-nav>li.active>a {
     background: transparent;
-    color: var(--theme-color);
+    color: var(--theme-color) !important;
   }
 
   .main-nav>li>a:after {
     content: "";
     display: block;
     background-color: var(--theme-color);
-    height: 2px;
+    height: 3px;
     width: 0%;
     -webkit-transition: 0.2s width;
     transition: 0.2s width;
+    position:absolute;
+    bottom: 0;
+    left: 0;
   }
 
   .main-nav>li>a:hover:after,
@@ -396,7 +409,7 @@ textarea:focus {
 
   .has-dropdown>a:before {
     font-family: 'FontAwesome';
-    content: "\f107";
+    content: "\f106";
     font-size: 6px;
     margin-left: 6px;
     float: right;
@@ -938,6 +951,7 @@ header {
   background-color: palevioletred;
   border-radius: 50%;
 }
+
 /* .medium_icon::after{
   content: "\f00c";
   font-family: 'FontAwesome';

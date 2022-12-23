@@ -58,7 +58,13 @@
 		var wScroll = $(this).scrollTop();
 
 		// Fixed nav
-		wScroll > 1 ? $('#nav').addClass('fixed-nav') : $('#nav').removeClass('fixed-nav');
+		if(wScroll > 1){
+			$('#nav').addClass('fixed-nav')
+			$('#nav').removeClass('nav-transparent')
+		}else{
+			$('#nav').removeClass('fixed-nav');
+			$('#nav').addClass('nav-transparent')
+		}
 
 		// Back To Top Appear
 		wScroll > 700 ? $('#back-to-top').fadeIn() : $('#back-to-top').fadeOut();
