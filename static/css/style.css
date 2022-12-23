@@ -342,8 +342,8 @@ textarea:focus {
   background-repeat: repeat-x;
   background-position: 0 0;
   background-color: rgba(0,0,0,.3);
-  z-index: 99999;
-  overflow: hidden;
+  /* z-index: 99999; */
+  /* overflow: hidden; */
 }
 
 
