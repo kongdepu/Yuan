@@ -83,9 +83,12 @@
           <li><a href="#pricing">Prices</a></li>
           <li class="has-dropdown">
             <a href="#team">更多</a>
-            <ul class="dropdown">
-              <li><a title="全屏显示" >全屏</a></li>
-            </ul>
+            <div class="dropdown">
+              <div>主题</div>
+              <ul>
+                <li><a title="全屏显示" >全屏</a></li>
+              </ul>
+            </div>
           </li>
           <li><a href="#medium">实用工具</a></li>
           <li><a href="#player">音乐盒</a></li>
@@ -492,7 +495,7 @@
     const themeColor = getThemeColor();
     for (i = 0; i < theme.length; i++) {
       theme[i].style.backgroundColor = themeColorInit[i];
-      if (theme[i].style.backgroundColor == themeColor) {
+      if (theme[i].style.backgroundColor == themeColor.trim()) {
         theme[i].classList.add("block_selected");
       }
     }
