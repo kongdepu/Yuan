@@ -3,68 +3,83 @@
 <html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width" />
 
-	<title>时钟</title>
+    <title>时钟</title>
 
-	<link rel="stylesheet" href="css/flipclock.css">
+    <link rel="stylesheet" href="css/flipclock.css">
 
-	<style>
-		* {
-			margin: 0px;
-			padding: 0px;
-		}
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
 
-		.container {
-			/* border: 1px solid red; */
-			width: 100%;
-			height: calc(100vh);
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
+        body {
+            background-color: #C7EDCC;
+        }
 
-		.flip-clock-label {
-			color: #FFF;
-		}
-	</style>
+        .container {
+            /* border: 1px solid red; */
+            width: 100%;
+            height: calc(100vh);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .flip-clock-label {
+            color: #FFF;
+        }
+    </style>
 
 </head>
 
 <body>
 
-	<div class="container">
-		<div id="clock"></div>
-	</div>
+    <div class="container">
+        <div id="clock"></div>
+    </div>
+
+
+    <script src="js/jquery-1.9.1.min.js"></script>
+
+    <script src="js/prefixfree.min.js"></script>
+
+    <script src="js/flipclock.min.js"></script>
+
+    <script src="js/jquery.fullscreen.js"></script>
+
+    <script>
+        (function ($) {
+            "use strict"
+            // 页面预加载
+            $('#clock').on('click', function () {
+                $(document).toggleFullScreen();
+            });
+            // 对应的是(天,时,分,12小时制,24小时制,计数)
+            // clockFace : DailyCounter | HourlyCounter | MinuteCounter | TwelveHourClock | TwentyFourHourClock | Counter
+            var clock = $('#clock').FlipClock({
+                clockFace: 'TwentyFourHourClock',
+            });
+
+            window.orientation == 90
+            //判断屏幕方向
+            if (window.orientation == 90 || window.orientation == -90) {
+                alert("横屏状态！")
+            }
+
+            
 
 
 
 
-	<script src="js/jquery-1.9.1.min.js"></script>
 
-	<script src="js/prefixfree.min.js"></script>
+        })(jQuery);
 
-	<script src="js/flipclock.min.js"></script>
-
-	<script src="js/jquery.fullscreen.js"></script>
-
-	<script>
-		(function ($) {
-			"use strict"
-			// 页面预加载
-			$('#clock').on('click', function () {
-				$(document).toggleFullScreen();
-			});
-			// 对应的是(天,时,分,12小时制,24小时制,计数)
-			// clockFace : DailyCounter | HourlyCounter | MinuteCounter | TwelveHourClock | TwentyFourHourClock | Counter
-			var clock = $('#clock').FlipClock({
-				clockFace: 'TwentyFourHourClock',
-			});
-		})(jQuery);
-
-	</script>
+    </script>
 
 
 </body>
