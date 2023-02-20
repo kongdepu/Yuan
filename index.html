@@ -77,22 +77,24 @@
             <!--  Main navigation  -->
             <ul class="main-nav nav navbar-nav navbar-right">
                 <li><a href="#home">主页</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#service">Services</a></li>
-                <li><a href="#pricing">Prices</a></li>
+                <li><a href="#modulo_one">模块一</a></li>
+                <li><a href="#numbers">统计</a></li>
+                <li><a href="#medium">实用工具</a></li>
+                <li><a href="#project">项目</a></li>
+                <li><a href="#player">音乐盒</a></li>
+                <li><a target="_blank" href="http://doc.kwyd.fun">笔记</a></li>
                 <li class="has-dropdown">
                     <a href="#team">更多</a>
                     <div class="dropdown">
-                        <div>主题</div>
                         <ul>
-                            <li><a title="全屏显示">全屏</a></li>
+                            <li>
+                                <a id="set-up">
+                                    <i class="fa fa-cog">设置</i>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </li>
-                <li><a href="#medium">实用工具</a></li>
-                <li><a href="#player">音乐盒</a></li>
-                <li><a target="_blank" href="http://doc.kwyd.fun">笔记</a></li>
             </ul>
             <!-- /Main navigation -->
 
@@ -115,7 +117,7 @@
                     </div>
                 </div>
                 <!-- /home content -->
-                <a href="#about" class="toNav"></a>
+                <a href="#modulo_one" class="toNav"></a>
             </div>
         </div>
     </div>
@@ -124,49 +126,19 @@
 </header>
 <!-- /Header -->
 
-<!-- About -->
-<div id="about" class="section md-padding" style="display: none;">
+<!-- 模块一 -->
+<div id="modulo_one" class="section md-padding">
 
     <!-- Container -->
     <div class="container">
-        <div id="about-slider" class="owl-carousel owl-theme">
-            <img class="img-responsive" src="./static/img/about1.jpg" alt="">
-            <img class="img-responsive" src="./static/img/about2.jpg" alt="">
-            <img class="img-responsive" src="./static/img/about3.jpg" alt="">
-            <img class="img-responsive" src="./static/img/about2.jpg" alt="">
-        </div>
+        模块一
     </div>
     <!-- /Container -->
 
 </div>
-<!-- /About -->
+<!-- /模块一 -->
 
-
-<!-- Portfolio -->
-<div id="portfolio" class="section md-padding bg-grey">
-
-    <!-- Container -->
-    <div class="container">
-        portfolio
-    </div>
-    <!-- /Container -->
-
-</div>
-<!-- /Portfolio -->
-
-<!-- Service -->
-<div id="service" class="section md-padding">
-
-    <!-- Container -->
-    <div class="container">
-        Service
-    </div>
-    <!-- /Container -->
-
-</div>
-<!-- /Service -->
-
-<!-- Numbers -->
+<!-- 统计 -->
 <div id="numbers" class="section sm-padding">
 
     <!-- Background Image -->
@@ -228,23 +200,46 @@
     <!-- /Container -->
 
 </div>
-<!-- /Numbers -->
+<!-- /统计 -->
 
-<!-- Pricing -->
-<div id="pricing" class="section md-padding">
+<!-- 实用工具 -->
+<div id="medium" class="section md-padding bg-grey">
 
     <!-- Container -->
     <div class="container">
-        pricing
+        <!-- Row -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title-tag">实用工具</div>
+            </div>
+            <div class="col-md-4 col-xs-6">
+                <div class="clock_time">
+                    <i class="fa fa-clock-o"></i>
+                    <div>
+                        <p class="p1">实时时间</p>
+                        <p>
+                            <a href="">点击预览</a> 
+                        </p>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col-md-4">
+                1
+            </div>
+            <div class="col-md-4">
+                1
+            </div>
+        </div>
+        <!-- /Row -->
     </div>
     <!-- /Container -->
 
 </div>
-<!-- /Pricing -->
+<!-- /实用工具 -->
 
-
-<!-- Testimonial -->
-<div id="testimonial" class="section md-padding">
+<!-- 项目 -->
+<div id="project" class="section md-padding">
 
     <!-- Background Image -->
     <div class="bg-img" style="background-image: url('./static/img/background1.jpg');">
@@ -254,34 +249,34 @@
 
     <!-- Container -->
     <div class="container">
-
-        <!-- Row -->
         <div class="row">
-
             <!-- Testimonial slider -->
             <div class="col-md-10 col-md-offset-1">
                 <div id="testimonial-slider" class="owl-carousel owl-theme">
 
                     <!-- testimonial -->
-                    <div class="testimonial">
-                        <div class="testimonial-meta">
-                            <img src="./img/about1.jpg" alt="">
-                            <h3 class="white-text">John Doe</h3>
-                            <span>Web Designer</span>
+                    <div class="project">
+                        <div class="project-meta">
+                            <img src="./static/img/crm.jpg" alt="">
+                            <h3 class="white-text">CRM</h3>
+                            <span><a target="_blank" href="http://116.196.104.170:8080/crm/user/sign.html">点击预览</a></span>
                         </div>
-                        <p class="white-text">Molestie at elementum eu facilisis sed odio. Scelerisque in dictum non
-                            consectetur a erat. Aliquam id diam maecenas ultricies mi eget mauris.</p>
+                        <p class="white-text">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本系统架构采用Spring/Mybatis/SpringMVC架构和MVC设计模式。
+                            该客户关系管理系统应提供一个客户服务在线平台，
+                            使客户服务处理过程中相关人员可以在线完成服务的处理和记录工作。
+                        </p>
                     </div>
                     <!-- /testimonial -->
 
                     <!-- testimonial -->
-                    <div class="testimonial">
-                        <div class="testimonial-meta">
-                            <img src="./img/about1.jpg" alt="">
+                    <div class="project">
+                        <div class="project-meta">
+                            <img src="./static/img/crm.jpg" alt="">
                             <h3 class="white-text">John Doe</h3>
                             <span>Web Designer</span>
                         </div>
-                        <p class="white-text">Molestie at elementum eu facilisis sed odio. Scelerisque in dictum non
+                        <p class="white-text" >Molestie at elementum eu facilisis sed odio. Scelerisque in dictum non
                             consectetur a erat. Aliquam id diam maecenas ultricies mi eget mauris.</p>
                     </div>
                     <!-- /testimonial -->
@@ -297,54 +292,8 @@
     <!-- /Container -->
 
 </div>
-<!-- /Testimonial -->
+<!-- /项目 -->
 
-<!-- Team -->
-<div id="team" class="section md-padding">
-
-    <!-- Container -->
-    <div class="container">
-
-        <!-- Row -->
-        <div class="row">
-        </div>
-        <!-- /Row -->
-
-    </div>
-    <!-- /Container -->
-
-</div>
-<!-- /Team -->
-
-<!-- 实用工具 -->
-<div id="medium" class="section md-padding bg-grey">
-
-    <!-- Container -->
-    <div class="container">
-        <!-- Row -->
-        <div class="row">
-            <div class="col-md-12">
-                <div class="title-tag">实用工具</div>
-            </div>
-            <div class="col-md-4 col-xs-6">
-                <div>
-                    <div>滚动时钟</div>
-                    <button class="main-btn">更多</button>
-                </div>
-            </div>
-            <div class="col-md-4">
-                1
-            </div>
-            <div class="col-md-4">
-                1
-            </div>
-        </div>
-        <!-- /Row -->
-    </div>
-    <!-- /Container -->
-
-</div>
-<!-- /Blog -->
 
 <!-- 音乐盒 -->
 <div id="player" class="section md-padding">
@@ -387,18 +336,19 @@
 
                 <!-- footer follow -->
                 <ul class="footer-follow">
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-github"></i></a></li>
+                    <li><a href="#"><i class="fa fa-qq"></i></a></li>
                     <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
                     <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                     <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                    <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                    <li><a href="#"><i class="fa fa-clock-o"></i></a></li>
                 </ul>
                 <!-- /footer follow -->
 
                 <!-- footer copyright -->
                 <div class="footer-copyright">
-                    <p>Copyright &copy; 2018.Company name All rights reserved</p>
+                    <p>Copyright &copy; 2022 - 2023 Yuan All Rights Reserved</p>
+                    <p ><a target="_blank" href="https://beian.miit.gov.cn/#/Integrated/index"> 冀ICP备2021027594号 </a></p>
                 </div>
                 <!-- /footer copyright -->
 
@@ -506,7 +456,7 @@
         // 音乐源下拉列表框选项改变时
         $('.aplayer-source-select').on('select2:select', function (e) {
             const data = e.params.data;
-            $.get("https://api.injahow.cn/meting/" + data.url, ((res) = > {
+            $.get("https://api.injahow.cn/meting/" + data.url, ((res) => {
                 switchPlayer(res);
         }))
             ;

@@ -26,7 +26,7 @@ function init() {
         order: 'list',
         audio: []
     });
-    $.get("https://api.injahow.cn/meting/?type=playlist", {id: '7594375387'}, ((res) = > {
+    $.get("https://api.injahow.cn/meting/?type=playlist", {id: '7594375387'}, ((res) => {
         player.list.add(lyricsFormatting(res));
 }))
     ;
@@ -36,7 +36,7 @@ init();
 
 // 歌词格式化
 function lyricsFormatting(data) {
-    return data.map((e) = > {
+    return data.map((e) => {
         return {
             name: e.name,
             artist: e.artist,

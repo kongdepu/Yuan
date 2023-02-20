@@ -66,35 +66,6 @@
             var clock = $('#clock').FlipClock({
                 clockFace: 'TwentyFourHourClock',
             });
-
-            //判断屏幕方向
-            if (window.orientation == 90 || window.orientation == -90) {
-                alert("横屏状态！")
-            }
-
-
-            window.addEventListener("orientationchange", function () {
-                var orientation = screen.orientation || window.orientation;
-                if (orientation.type === "portrait-primary" || orientation.type === "portrait-secondary") {
-                    document.body.style.transform = "rotate(90deg)";
-                    document.body.style.transformOrigin = "left top";
-                    document.body.style.width = "100vh";
-                    document.body.style.position = "absolute";
-                    document.body.style.top = "100%";
-                    document.body.style.left = "0";
-                } else {
-                    document.body.style.transform = "";
-                    document.body.style.transformOrigin = "";
-                    document.body.style.width = "";
-                    document.body.style.position = "";
-                    document.body.style.top = "";
-                    document.body.style.left = "";
-                }
-            });
-
-
-
-
         })(jQuery);
 
     </script>

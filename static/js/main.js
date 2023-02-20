@@ -7,7 +7,7 @@
     });
 
     // 获取主页文案
-    $.get("https://v1.hitokoto.cn/?c=f&encode=text", ((res) = > {
+    $.get("https://v1.hitokoto.cn/?c=f&encode=text", ((res) => {
         $('#copywriting').text(res)
 }))
     ;
